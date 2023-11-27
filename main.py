@@ -44,6 +44,12 @@ def count_down(count):
         window.after(1000,count_down, count - 1)
     else:
         start_timer()
+        marks = ""
+        work_sessions = math.floor(reps/2)
+        for _ in range(work_sessions):
+            marks += "✔"
+        check_marks.config(text=marks)
+
 # ---------------------------- UI SETUP ------------------------------- #
 
 
